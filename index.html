@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Punkt Glanz - Sauberkeit mit System</title>
+<meta name="description" content="Professionelle Reinigung in Nordrhein-Westfalen – mit Leidenschaft für Sauberkeit." />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Poppins', sans-serif; background:#121212; color:#fff; line-height:1.8; }
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, #00008B 0%, #0000A0 100%);
+  text-align:center; padding:5rem 1rem 4rem; position:relative; clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+.logo-container { width:150px; height:150px; margin:0 auto 1rem; border-radius:50%; overflow:hidden; box-shadow:0 5px 20px rgba(0,0,0,0.3); border:4px solid rgba(255,255,255,0.4); }
+.logo-container img { width:100%; height:100%; object-fit:cover; }
+
+/* TEXT ANIMATION */
+@keyframes gradientShiftBlue {0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+.animate-gradient-text { background: linear-gradient(90deg, #1E3A8A, #3B82F6, #60A5FA); background-size:200% 200%; -webkit-background-clip:text; color:transparent; animation: gradientShiftBlue 4s ease infinite; display:inline-block; }
+.text-shadow-3d { text-shadow:2px 2px 0 #1E3A8A,4px 4px 0 #3B82F6,6px 6px 0 #60A5FA,0 0 10px rgba(0,0,0,0.3); position:relative; transition:0.3s; }
+@keyframes floatH1 {0%,100%{transform:translateY(0);}50%{transform:translateY(-6px);}}
+.float-title { display:inline-block; animation:floatH1 3s ease-in-out infinite; }
+@keyframes shine {0%,100%{text-shadow:2px 2px 10px rgba(0,0,0,0.6);}50%{text-shadow:4px 4px 15px rgba(0,0,0,0.8);}}
+.shine-text { animation:shine 3s ease-in-out infinite; color:#E0F7FF; }
+.reflection { position:absolute; top:100%; width:100%; height:60px; transform:scaleY(-1); filter:blur(2px); opacity:0.6; pointer-events:none; background: linear-gradient(90deg, #60A5FA, #3B82F6, #1E3A8A, #3B82F6, #60A5FA); background-size:200% 200%; animation: gradientShiftBlue 4s ease infinite, floatH1 3s ease-in-out infinite; }
+.tagline { font-size:1.2rem; opacity:0.9; max-width:600px; margin:1rem auto 1.5rem; color:#E0F7FF; }
+.btn-primary { display:inline-block; padding:0.8rem 2rem; background:#00b4ff; color:#fff; border-radius:30px; text-decoration:none; font-weight:600; box-shadow:0 4px 15px rgba(0,180,255,0.4); transition:all 0.3s; }
+.btn-primary:hover { transform:translateY(-3px); box-shadow:0 6px 20px rgba(0,180,255,0.6); }
+
+/* CONTAINER */
+.container { max-width:1000px; margin:0 auto; padding:4rem 1.5rem 3rem; background:#E0F7FF; min-height:100vh; position:relative; z-index:10; color:#333; }
+.container::after { content:''; position:absolute; bottom:0; left:0; width:100%; height:100px; background:linear-gradient(135deg,#00008B 0%,#0000A0 100%); clip-path: polygon(0 0,100% 0,100% 100%,0 80%); z-index:-1; }
+section { margin:3rem 0; padding:0 1rem; }
+h2 { color:#0000A0; font-size:1.9rem; margin-bottom:1.8rem; text-align:center; position:relative; }
+h2:after { content:''; position:absolute; left:50%; bottom:-10px; transform:translateX(-50%); width:80px; height:4px; background:#0000A0; border-radius:2px; }
+
+/* SERVICES */
+.services-grid { display:flex; flex-direction:column; gap:1.5rem; max-width:700px; margin:0 auto; position:relative; }
+.service-item { display:flex; align-items:center; gap:1rem; padding:1rem; background:#E0F7FF; border-radius:12px; box-shadow:0 3px 10px rgba(0,0,0,0.1); transition: transform 0.3s, background 0.3s, box-shadow 0.3s; position:relative; overflow:hidden; cursor:pointer; color:#000; }
+.service-item:hover { transform:translateY(-5px); }
+.service-item:active { transform: translateY(-10px) scale(1.05) rotateX(5deg) rotateY(5deg); background:#ADD8E6; box-shadow:0 8px 20px rgba(0,0,0,0.3); transition: transform 0.2s, background 0.2s, box-shadow 0.2s; }
+.service-icon { font-size:2.2rem; animation: float 2s ease-in-out infinite; }
+.service-item:active .service-icon { animation: pulse 0.5s ease-in-out; }
+@keyframes pulse {0% { transform: scale(1);} 50% { transform: scale(1.3);} 100% { transform: scale(1);}}
+@keyframes float {0%,100%{transform:translateY(0);}50%{transform:translateY(-6px);}}
+
+/* ICON COLORS */
+.fa-house { color:#4CAF50; } 
+.fa-building-columns { color:#FF5722; } 
+.fa-window-restore { color:#03A9F4; } 
+.fa-hotel { color:#9C27B0; } 
+.fa-building { color:#9E9E9E; } 
+.fa-star { color:#FFD700; }
+
+.sparkle-icon { position:absolute; width:5px; height:5px; border-radius:50%; background:#FFD700; pointer-events:none; }
+
+/* CONTACT */
+.contact-info p { margin:1.2rem 0; font-size:1.1rem; color:#000; }
+.contact-btn { display:inline-flex; align-items:center; gap:0.5rem; margin:0 0.3rem; padding:0.5rem 1rem; border-radius:8px; text-decoration:none; font-size:0.9rem; font-weight:500; color:#fff; }
+.whatsapp { background:#25D366; color:#fff; } 
+.call { background:#1a56db; color:#fff; } 
+.email { background:#ff9800; color:#fff; }
+
+/* FOOTER */
+footer { text-align:center; padding:2.5rem 1.5rem; background: linear-gradient(135deg,#00008B 0%,#0000A0 100%); color:#fff; margin-top:2rem; }
+footer p { margin:0.5rem 0; font-size:1.1rem; } footer a { color:#00b4ff; text-decoration:none; font-weight:600; }
+
+/* RESPONSIVE */
+@media(max-width:600px){.main-title{font-size:2.2rem;}.container{padding:3rem 1rem;}}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+<div class="logo-container"><img src="https://i.ibb.co/x8D06Wxx/IMG-20250810-WA0014.jpg" alt="Punkt Glanz Logo"></div>
+<div style="position: relative; display: inline-block;">
+<h1 class="float-title text-shadow-3d">
+<span class="animate-gradient-text">Weil Ihr Glanz</span>
+<span class="shine-text"> unser Punkt ist</span>
+</h1>
+<div class="reflection"></div>
+</div>
+<p class="tagline">Professionelle Reinigung in Nordrhein-Westfalen – mit Leidenschaft für Sauberkeit</p>
+<a href="#kontakt" class="btn-primary">Jetzt Angebot anfordern</a>
+</header>
+
+<!-- CONTAINER -->
+<div class="container">
+
+<section>
+<h2>Über uns</h2>
+<p>Ihre Zufriedenheit ist unser Maßstab. Mit jahrelanger Erfahrung bieten wir professionelle Reinigungslösungen für Privathaushalte, Büros, Hotels und Gebäude – pünktlich, zuverlässig und mit höchster Qualität.</p>
+</section>
+
+<section>
+<h2>Unsere Leistungen</h2>
+<div class="services-grid">
+<div class="service-item"><i class="fas fa-house service-icon"></i> <strong>Hausreinigung</strong></div>
+<div class="service-item"><i class="fas fa-building-columns service-icon"></i> <strong>Büroreinigung</strong></div>
+<div class="service-item"><i class="fas fa-window-restore service-icon"></i> <strong>Fensterreinigung</strong></div>
+<div class="service-item"><i class="fas fa-hotel service-icon"></i> <strong>Hotelreinigung</strong></div>
+<div class="service-item"><i class="fas fa-building service-icon"></i> <strong>Gebäudereinigung</strong></div>
+<div class="service-item"><i class="fas fa-star service-icon"></i> <strong>Und vieles mehr</strong></div>
+</div>
+</section>
+
+<section id="kontakt">
+<h2>Kontakt</h2>
+<div class="contact-info">
+<p><strong>Email:</strong> <a href="mailto:Punkt.glanz@web.de" class="contact-btn email"><i class="fas fa-envelope"></i> E-Mail</a></p>
+<p><strong>Telefon:</strong> <a href="tel:015754927823" class="contact-btn call"><i class="fas fa-phone"></i> Anrufen</a></p>
+<p><strong>WhatsApp:</strong> <a href="https://wa.me/017672751176" target="_blank" class="contact-btn whatsapp"><i class="fab fa-whatsapp"></i> Chat</a></p>
+<p><strong>Servicegebiet:</strong> Nordrhein-Westfalen</p>
+</div>
+</section>
+</div>
+
+<footer>
+<p><i class="fas fa-envelope"></i> <a href="mailto:Punkt.glanz@web.de">Punkt.glanz@web.de</a></p>
+<p><i class="fas fa-phone"></i> <a href="tel:015754927823">015754927823</a> | <a href="tel:017672751176">017672751176</a></p>
+<p>&copy; 2025 Punkt Glanz. Alle Rechte vorbehalten.</p>
+</footer>
+
+<script>
+document.querySelectorAll('.service-item').forEach(item=>{
+for(let i=0;i<8;i++){
+const sparkle = document.createElement('span');
+sparkle.classList.add('sparkle-icon');
+item.appendChild(sparkle);
+const animate = ()=>{
+const x=Math.random()*item.offsetWidth;
+const y=Math.random()*item.offsetHeight;
+sparkle.style.transform=`translate(${x}px,${y}px) scale(0)`;
+sparkle.style.opacity='0';
+const delay=Math.random()*3000;
+setTimeout(()=>{
+sparkle.style.transition='transform 0.6s ease, opacity 0.6s ease';
+sparkle.style.transform=`translate(${x}px,${y}px) scale(1.5)`;
+sparkle.style.opacity='1';
+setTimeout(()=>{
+sparkle.style.transform=`translate(${x}px,${y}px) scale(0)`;
+sparkle.style.opacity='0';
+setTimeout(animate, 500+Math.random()*2000);
+},600);
+},delay);
+};
+animate();
+}
+});
+</script>
+
+</body>
+</html>
