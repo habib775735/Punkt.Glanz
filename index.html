@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Punkt Glanz - Reinigung in NRW</title>
+  <meta name="description" content="Professionelle Reinigung in Nordrhein-Westfalen – mit Leidenschaft für Sauberkeit." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #121212;
+      color: #fff;
+      line-height: 1.8;
+    }
+    header {
+      background: linear-gradient(135deg, #00008B 0%, #0000A0 100%);
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem;
+      position: relative;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+    .logo-container {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 1rem;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      border: 4px solid rgba(255, 255, 255, 0.4);
+    }
+    .logo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .header-content h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      transform: skew(10deg);
+    }
+    .tagline {
+      font-size: 1.4rem;
+      opacity: 0.9;
+      transform: skew(10deg);
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem;
+      background: #121212;
+      min-height: 100vh;
+      position: relative;
+      z-index: 10;
+    }
+    .container::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(135deg, #00008B 0%, #0000A0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+      z-index: -1;
+    }
+    section {
+      margin: 2.5rem 0;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    section:nth-child(2) { animation-delay: 0.4s; }
+    section:nth-child(3) { animation-delay: 0.5s; }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h2 {
+      color: #0000A0;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+    h2:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 60px;
+      height: 4px;
+      background: #0000A0;
+      border-radius: 2px;
+    }
+    .service-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      border-left: 4px solid #0000A0;
+    }
+    .service-icon {
+      font-size: 2rem;
+      color: #0000A0;
+      margin-top: 0.3rem;
+    }
+    .service-text {
+      flex: 1;
+    }
+    .contact-info {
+      background: rgba(18, 18, 18, 0.8);
+      padding: 1.8rem;
+      border-radius: 12px;
+      margin: 1.8rem 0;
+      line-height: 1.8;
+    }
+    .contact-info a {
+      color: #0000A0;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin-top: 1.5rem;
+    }
+    input, textarea {
+      padding: 0.9rem;
+      border: 1px solid #333;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #222;
+      color: white;
+    }
+    button {
+      background: #0000A0;
+      color: white;
+      border: none;
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      transition: all 0.3s;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #121212;
+      color: #666;
+      font-size: 0.95rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 600px) {
+      .header-content h1 { font-size: 2.2rem; }
+      .tagline { font-size: 1.1rem; }
+      .container { padding: 2.5rem 1rem; }
+      .container::after { height: 80px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="https://i.ibb.co/x8D06Wxx/IMG-20250810-WA0014.jpg" alt="Punkt Glanz Logo">
+    </div>
+    <div class="header-content">
+      <h1>Punkt Glanz</h1>
+      <p class="tagline">Professionelle Reinigung in Nordrhein-Westfalen – mit Leidenschaft für Sauberkeit</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2>Über uns</h2>
+      <p>Ihre Zufriedenheit ist unser Maßstab. Mit jahrelanger Erfahrung bieten wir professionelle Reinigungslösungen für Privathaushalte, Büros, Hotels und Gebäude – pünktlich, zuverlässig und mit höchster Qualität.</p>
+    </section>
+
+    <section>
+      <h2>Unsere Leistungen</h2>
+      <div class="service-item">
+        <i class="fas fa-home service-icon"></i>
+        <div class="service-text"><strong>Hausreinigung</strong> – Regelmäßige oder einmalige Wohnungsreinigung</div>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-building service-icon"></i>
+        <div class="service-text"><strong>Büroreinigung</strong> – Für eine saubere und produktive Arbeitsatmosphäre</div>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-window-clean service-icon"></i>
+        <div class="service-text"><strong>Fensterreinigung</strong> – Von innen und außen, inklusive Rahmen</div>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-hotel service-icon"></i>
+        <div class="service-text"><strong>Hotelreinigung</strong> – Vollständige Reinigung von Zimmern und Gemeinschaftsräumen</div>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-building service-icon"></i>
+        <div class="service-text"><strong>Gebäudereinigung</strong> – Treppenhäuser, Flure, sanitäre Anlagen</div>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-star service-icon"></i>
+        <div class="service-text"><strong>Und vieles mehr...</strong> – Sprechen Sie uns an!</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Kontakt</h2>
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:Punkt.glanz@web.de">Punkt.glanz@web.de</a></p>
+        <p><strong>Telefon:</strong> <a href="tel:015754927823">015754927823</a></p>
+        <p><strong>Telefon:</strong> <a href="tel:017672751176">017672751176</a></p>
+        <p><strong>Servicegebiet:</strong> Nordrhein-Westfalen</p>
+      </div>
+      <h3>Schreiben Sie uns eine Nachricht</h3>
+      <form action="https://submit-form.com/abc123xyz" method="POST">
+        <input type="text" name="name" placeholder="Ihr Name" required />
+        <input type="email" name="email" placeholder="Ihre E-Mail" required />
+        <textarea name="message" placeholder="Ihre Nachricht"></textarea>
+        <button type="submit">Jetzt absenden</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>&copy; 2025 Punkt Glanz. Alle Rechte vorbehalten.</footer>
+</body>
+</html>
